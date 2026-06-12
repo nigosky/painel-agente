@@ -1,0 +1,17 @@
+| Posição | Jogadores | Vitórias | Derrotas | Win Rate | Último Jogo | Status | Proteção | Pode desafiar | Pode ser desafiado | Batalha por posição | Motivo |
+|---:|---|---:|---:|---:|---|---|---|---|---|---|---|
+| 1 | Showtaro / Vitor | 2 | 0 | 100% | V#8 | partida marcada - domingo às 19:30 |  |  |  | batalha pela #1 posição | Tomou posição e segue invicto. |
+| 2 | Lion Heart / SaNgar | 2 | 0 | 100% | V#7 | partida marcada - segunda-feira às 21 horas |  |  |  | batalha pela #2 posição | Defendeu posição contra Bineto / nigo. |
+| 2 | Hjax / viperking | 2 | 0 | 100% | V#10 | partida marcada - domingo às 19:30 |  |  |  | batalha pela #1 posição | Defendeu posição inicial; segue invicto. |
+| 4 | Chacineiro / Alface / Vikitor | 1 | 1 | 50% | D#8 | partida marcada - segunda-feira às 21 horas |  |  |  | batalha pela #2 posição | Perdeu posição para Showtaro / Vitor; herdou bloco anterior. |
+| 5 | Lem / vonMises / Cunha | 2 | 1 | 67% | V#13 |  | proteção 48 horas sem ser desafiado até sábado | pode desafiar 3 posições acima |  | * | Defendeu posição contra arc / Gabe. |
+| 6 | arc / Gabe | 2 | 2 | 50% | D#13 |  |  | pode desafiar 3 posições acima | pode ser desafiado 3 abaixo | * | Perdeu desafio para Lem / vonMises / Cunha; posição preservada. |
+| 7 | General Winter / Skobadark | 1 | 1 | 50% | V#12 |  | proteção 48 horas sem ser desafiado até sexta-feira | pode desafiar 3 posições acima |  | * | Defendeu posição contra Sauronzinho/ Dragoness. |
+| 8 | Maití / meuqsaco | 0 | 1 | 0% | D#1 | partida marcada - segunda-feira às 21 horas |  |  |  | batalha pela #8 posição; perdedor cai uma posição | Sem vitória; ordem visual por data. |
+| 8 | Infiel / KSxWOS | 0 | 1 | 0% | D#4 | partida marcada - segunda-feira às 21 horas |  |  |  | batalha pela #8 posição; perdedor cai uma posição | Sem vitória; ordem visual por data. |
+| 8 | Bineto / nigo | 0 | 2 | 0% | D#7 | partida marcada - sexta-feira às 21 horas |  |  |  | batalha pela #8 posição; perdedor cai uma posição | Perdeu desafio para Lion Heart / SaNgar; posição preservada. |
+| 8 | gaules / gbytes | 0 | 2 | 0% | D#9 | partida marcada - sexta-feira às 21 horas |  |  |  | batalha pela #8 posição; perdedor cai uma posição | Perdeu desafio para arc / Gabe; posição preservada. |
+| 12 | Sauronzinho/ Dragoness | 1 | 1 | 50% | D#12 |  |  | pode desafiar 3 posições acima | pode ser desafiado 3 abaixo | * | Perdeu desafio para General Winter / Skobadark; posição preservada. |
+| 13 | Major Bruno / Razi | 0 | 1 | 0% | D#11 | partida marcada aguardando agendamento |  |  |  | batalha pela #13 posição | Perdeu empate para Sauronzinho/ Dragoness; caiu pelo 1224. |
+| 14 | Alekel / Phobbos | 0 | 0 | — | Sem jogos | partida marcada aguardando agendamento |  |  |  | batalha pela #13 posição | A estrear; acima dos inativos. |
+| 15 | Violante / Phayol | 0 | 0 | — | Sem jogos | inativo |  |  |  | inativo | Inativo; fica no final. |
