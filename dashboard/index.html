@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard Ladder CoH3 2v2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Discord Veteranos • Company of Heroes 3</p>
+        <h1>Painel de controle da Ladder 2v2</h1>
+        <p class="subtitle">
+          Cadastre partidas, situações operacionais e batalhas futuras. O ranking, proteções,
+          permissões de desafio e auditoria são recalculados automaticamente no navegador.
+        </p>
+      </div>
+      <div class="toolbar">
+        <button id="exportState" type="button">Exportar dados</button>
+        <label class="file-button">
+          Importar dados
+          <input id="importState" type="file" accept="application/json" />
+        </label>
+        <button id="resetState" class="ghost" type="button">Restaurar exemplo</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="cards" aria-label="Resumo da ladder">
+        <article class="card"><span id="teamCount">0</span><small>times</small></article>
+        <article class="card"><span id="matchCount">0</span><small>resultados</small></article>
+        <article class="card"><span id="battleCount">0</span><small>batalhas marcadas</small></article>
+        <article class="card"><span id="auditCount">0</span><small>alertas de auditoria</small></article>
+      </section>
+
+      <nav class="tabs" aria-label="Áreas do dashboard">
+        <button class="tab active" data-tab="ranking" type="button">Ranking</button>
+        <button class="tab" data-tab="results" type="button">Resultados</button>
+        <button class="tab" data-tab="situations" type="button">Situações</button>
+        <button class="tab" data-tab="challenges" type="button">Batalhas futuras</button>
+        <button class="tab" data-tab="audit" type="button">Auditoria</button>
+      </nav>
+
+      <section id="ranking" class="panel active">
+        <div class="panel-heading">
+          <div>
+            <h2>Ranking atual</h2>
+            <p>Ordenação padrão de competição com empates, status atual e batalha por posição.</p>
+          </div>
+          <button id="exportRankingCsv" type="button">Baixar ranking CSV</button>
+        </div>
+        <div class="table-wrap">
+          <table id="rankingTable"></table>
+        </div>
+      </section>
+
+      <section id="results" class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Resultados homologados</h2>
+            <p>Ao cadastrar uma nova partida, o ranking é recalculado imediatamente.</p>
+          </div>
+        </div>
+        <form id="resultForm" class="grid-form">
+          <label>Data <input name="date" type="date" required /></label>
+          <label>Desafiado <select name="challenged" required></select></label>
+          <label>Resultado <input name="result" placeholder="1-0" pattern="[0-9]+-[0-9]+" required /></label>
+          <label>Desafiante <select name="challenger" required></select></label>
+          <label>Mapa <input name="map" placeholder="Elst Outskirts" /></label>
+          <button type="submit">Adicionar resultado</button>
+        </form>
+        <div class="table-wrap compact">
+          <table id="resultsTable"></table>
+        </div>
+      </section>
+
+      <section id="situations" class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Status, proteções e permissões</h2>
+            <p>Use campos próprios para proteção, quem pode desafiar e quem pode ser desafiado.</p>
+          </div>
+        </div>
+        <form id="situationForm" class="grid-form wide">
+          <label>Time <select name="team" required></select></label>
+          <label>Status <input name="status" placeholder="partida marcada - domingo às 19:30" /></label>
+          <label>Proteção <input name="protection" placeholder="proteção 48 horas..." /></label>
+          <label>Pode desafiar <input name="canChallenge" placeholder="pode desafiar 3 posições acima" /></label>
+          <label>Pode ser desafiado <input name="canBeChallenged" placeholder="pode ser desafiado 3 abaixo" /></label>
+          <label>Batalha por posição <input name="battleFor" placeholder="batalha pela #8 posição" /></label>
+          <button type="submit">Salvar situação</button>
+        </form>
+        <div class="table-wrap compact">
+          <table id="situationsTable"></table>
+        </div>
+      </section>
+
+      <section id="challenges" class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Próximas batalhas de posição</h2>
+            <p>Controle confrontos agendados e valide se cada equipe tem apenas um desafio ativo.</p>
+          </div>
+        </div>
+        <form id="challengeForm" class="grid-form">
+          <label>Desafiado <select name="challenged" required></select></label>
+          <label>Desafiante <select name="challenger" required></select></label>
+          <label>Agendamento <input name="schedule" placeholder="sexta-feira às 21 horas" /></label>
+          <label>Batalha <input name="battleFor" placeholder="batalha pela #8 posição" /></label>
+          <button type="submit">Adicionar batalha</button>
+        </form>
+        <div class="table-wrap compact">
+          <table id="challengesTable"></table>
+        </div>
+      </section>
+
+      <section id="audit" class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Auditoria automática</h2>
+            <p>Valida direção dos desafios, limite de 3 posições e múltiplos desafios ativos.</p>
+          </div>
+        </div>
+        <ul id="auditList" class="audit-list"></ul>
+        <h3>Histórico dia a dia</h3>
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </main>
+
+    <template id="deleteButtonTemplate">
+      <button class="danger small" type="button">Remover</button>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
